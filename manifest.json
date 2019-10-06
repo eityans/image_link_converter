@@ -1,0 +1,18 @@
+{
+    "manifest_version": 2,
+    "name": "image link converter",
+    "description": "convert image link '[!image]...' to '<img ...>' ",
+    "version": "0.1",
+    "browser_action": {
+        "default_title": "アラート"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": ["js/jquery.js", "js/script.js"],
+        "run_at": "document_end"
+      }],
+    "background": {
+      "scripts": ["js/jquery.js", "js/background.js"]
+    },
+    "permissions": ["activeTab"]
+  }
