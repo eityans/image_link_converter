@@ -2,9 +2,9 @@
     "manifest_version": 2,
     "name": "GitHub image link converter",
     "description": "convert image link '[!image]...' to '<img ...>' ",
-    "version": "0.2",
+    "version": "0.3",
     "browser_action": {
-        "default_title": "アラート"
+        "default_title": "GitHub image link converter"
     },
     "content_scripts": [{
         "matches": ["https://github.com/"],
