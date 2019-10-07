@@ -2,9 +2,7 @@ var name;
 console.log(name);
 
 $("textarea").focus(function(){
-    var cur = $(this).attr("id");
-    name = cur;
-    $("#cur").val(cur);
+    name = $(this).attr("id");
 });
 
 var selectionObject = window.getSelection();

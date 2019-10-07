@@ -12,7 +12,7 @@
         "run_at": "document_end"
       }],
     "background": {
-      "scripts": ["js/jquery.js", "js/background.js"]
+      "scripts": ["js/background.js"]
     },
     "permissions": ["activeTab"]
   }
