@@ -1,8 +1,8 @@
 var name;
-console.log(name);
 
-$("textarea").focus(function(){
+$(document).on('focus', 'textarea', function(){
     name = $(this).attr("id");
+    //console.log(name);
 });
 
 var selectionObject = window.getSelection();
@@ -13,5 +13,5 @@ var val = textarea.value;
 var range = val.slice(pos_start, pos_end);
 var beforeNode = val.slice(0, pos_start);
 var afterNode = val.slice(pos_end);
-var insertNode = range.replace( /\!\[image\]\(/g, '<img src="' ).replace(/\)/g, '" width="320">');
+var insertNode = range.replace( /\!\[.*\]\(/g, '<img src="' ).replace(/\)/g, '" width="320">');
 textarea.value = beforeNode + insertNode + afterNode;
